@@ -13,22 +13,22 @@ export default function Nav() {
         </div>
         <div className="flex content-center">
           <ul className="w-full flex items-center">
-            <li className="mr-4 font-semibold transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
-            <li className="mr-4 font-semibold transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
-            <li className="mr-4 font-semibold transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
-            <li className="mr-4 font-semibold transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
+            <li className="mr-4 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
+            <li className="mr-4 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
+            <li className="mr-4 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
+            <li className="mr-4 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
           </ul>
         </div>
         <div className="flex items-center ">
           <button
             type="button"
-            className="w-32 bg-myred hover:bg-white text-white hover:text-myred font-semibold border border-myred py-2 px-4 rounded mr-6"
+            className="w-32 bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded mr-6"
           >
             Subscribe
           </button>
           <button
             type="button"
-            className="w-32 bg-myred hover:bg-white text-white hover:text-myred font-semibold border border-myred py-2 px-4 rounded"
+            className="w-32 bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded"
           >
             Sign-in
           </button>

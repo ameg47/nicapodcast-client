@@ -10,6 +10,9 @@ module.exports = {
         myred: '#F13C45',
         'Dark-blue': '#0B2342',
       },
+      fontFamily: {
+        poppins: ['Poppins'],
+      },
     },
   },
   plugins: [],
