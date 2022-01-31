@@ -22,13 +22,13 @@ export default function Nav() {
         <div className="flex items-center ">
           <button
             type="button"
-            className="w-32 bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded mr-6"
+            className="w-32 bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded-sm mr-6"
           >
             Subscribe
           </button>
           <button
             type="button"
-            className="w-32 bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded"
+            className="w-32 bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded-sm"
           >
             Sign-in
           </button>
