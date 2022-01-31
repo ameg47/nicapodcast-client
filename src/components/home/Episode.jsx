@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Episode() {
   return (
-    <div className="grid grid-cols-4 my-10 divide-x">
+    <div className="grid grid-cols-5 my-10 divide-x px-4">
       <div><img alt="" /></div>
-      <div className="col-span-2 px-2">
+      <div className="col-span-3 px-6">
         <h2 className="text-2xl">Aliquam tincidunt mauris eu risus.</h2>
         <p className="my-4">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet oi.</p>
         <button type="button" className="w-32 text-sm bg-white hover:bg-myred text-myred hover:text-white border border-myred py-2 px-4 rounded">

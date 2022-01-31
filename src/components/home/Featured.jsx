@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Featured() {
   return (
-    <div className="py-20 px-20 bg-gray-50 flex">
+    <div className="py-20 px-36 bg-gray-50 flex">
       <div className="w-1/2 mb-36">
         <div className="flex flex-start items-center my-4">
           <div className="h-0.5 w-6 bg-myred" />
