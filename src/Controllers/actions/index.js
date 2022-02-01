@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { BASIC_URL, GET_MENU, GET_POSTS } from '../constants';
+import {
+  BASIC_URL, GET_MENU, GET_PODCASTS, GET_POSTS,
+} from '../constants';
 
 export function getMenu() {
   return async function menu(dispatch) {
@@ -13,6 +15,14 @@ export function getPosts() {
   return async function posts(dispatch) {
     await axios.get(`${BASIC_URL}/posts?_embed`)
       .then((r) => { dispatch({ type: GET_POSTS, payload: r.data }); })
+      .catch((r) => r.response.data);
+  };
+}
+
+export function getPodcasts() {
+  return async function podcasts(dispatch) {
+    await axios.get(`${BASIC_URL}/podcast?_embed`)
+      .then((r) => { dispatch({ type: GET_PODCASTS, payload: r.data }); })
       .catch((r) => r.response.data);
   };
 }

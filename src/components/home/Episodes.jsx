@@ -1,7 +1,10 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Episode from './Episode';
 
 export default function Episodes() {
+  const podcasts = useSelector((state) => state.podcasts);
   return (
     <div className="mx-48 border -mt-16 bg-white rounded-lg shadow-xl">
       <div className="px-12 py-12">
@@ -12,8 +15,20 @@ export default function Episodes() {
           </button>
         </div>
         <ul className="my-16">
-          <li><Episode /></li>
-          <li><Episode /></li>
+          {podcasts && podcasts.map((podcast) => (
+            <li>
+              <Episode
+                title={podcast.title.rendered}
+                content={podcast.content.rendered}
+                image={podcast._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
+                genre={podcast.acf.genre}
+                season={podcast.acf.season}
+                date={podcast.date}
+              />
+            </li>
+          ))}
+          {/* <li><Episode /></li>
+          <li><Episode /></li> */}
         </ul>
         <div className="flex justify-center">
           <button
