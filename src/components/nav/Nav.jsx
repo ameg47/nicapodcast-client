@@ -1,6 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 export default function Nav() {
+  const menuElem = useSelector((state) => state.menu);
+  // console.log(menuElem);
   return (
     <header>
       <nav className="flex justify-between py-4 px-36 bg-gray-50 ">
@@ -13,10 +16,12 @@ export default function Nav() {
         </div>
         <div className="flex content-center">
           <ul className="w-full flex items-center">
-            <li className="mr-8 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
-            <li className="mr-8 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
-            <li className="mr-8 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
-            <li className="mr-8 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">Home</li>
+            {menuElem
+            && menuElem.map((elem) => (
+              <li className="mr-8 transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">
+                {elem.title}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="flex items-center ">

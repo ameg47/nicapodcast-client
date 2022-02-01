@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getMenu } from '../Controllers/actions';
 import './App.css';
 import Footer from './footer/Footer';
 import Home from './home/Home-container';
 import Nav from './nav/Nav';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMenu());
+  }, []);
+
   return (
     <div className="font-poppins">
       <Nav />
