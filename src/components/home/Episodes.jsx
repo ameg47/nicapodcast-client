@@ -1,9 +1,10 @@
 /* eslint-disable no-underscore-dangle */
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Episode from './Episode';
 
 export default function Episodes() {
+  const [numEp, setNumep] = useState(3);
   const podcasts = useSelector((state) => state.podcasts);
   return (
     <div className="mx-48 border -mt-16 bg-white rounded-lg shadow-xl">
@@ -15,7 +16,7 @@ export default function Episodes() {
           </button>
         </div>
         <ul className="my-16">
-          {podcasts && podcasts.map((podcast) => (
+          {podcasts && podcasts.slice(0, numEp).map((podcast) => (
             <li>
               <Episode
                 title={podcast.title.rendered}
@@ -33,6 +34,7 @@ export default function Episodes() {
         <div className="flex justify-center">
           <button
             type="button"
+            onClick={() => { setNumep(numEp + 1); }}
             className="w-44 text-sm bg-white hover:bg-myred text-myred hover:text-white border border-myred py-2 px-4 rounded"
           >
             Show More Episodes
