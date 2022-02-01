@@ -1,4 +1,4 @@
-import { GET_MENU } from '../constants';
+import { GET_MENU, GET_POSTS } from '../constants';
 
 const initialState = {
   posts: [],
@@ -13,6 +13,11 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         menu: action.payload.items,
+      };
+    case GET_POSTS:
+      return {
+        ...state,
+        posts: action.payload,
       };
     default:
       return state;

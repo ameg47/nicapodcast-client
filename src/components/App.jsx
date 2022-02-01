@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getMenu } from '../Controllers/actions';
+import { getMenu, getPosts } from '../Controllers/actions';
 import './App.css';
 import Footer from './footer/Footer';
 import Home from './home/Home-container';
@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getMenu());
+    dispatch(getPosts());
   }, []);
 
   return (

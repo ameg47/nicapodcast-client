@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 export default function Nav() {
   const menuElem = useSelector((state) => state.menu);
-  // console.log(menuElem);
+
   return (
     <header>
       <nav className="flex justify-between py-4 px-36 bg-gray-50 ">

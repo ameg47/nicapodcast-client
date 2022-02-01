@@ -1,6 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 export default function Footer() {
+  const menuElem = useSelector((state) => state.menu);
+
   return (
     <div className="my-12 mx-48 divide-y">
       <div className="grid grid-cols-5">
@@ -14,10 +17,12 @@ export default function Footer() {
         </div>
         <div>
           <h2 className="font-semibold mb-8">Pages</h2>
-          <p className="text-stone-400 mb-4">element</p>
-          <p className="text-stone-400 mb-4">element</p>
-          <p className="text-stone-400 mb-4">element</p>
-          <p className="text-stone-400 mb-4">element</p>
+          {menuElem
+            && menuElem.map((elem) => (
+              <p className="text-stone-400 mb-4 hover:cursor-pointer">
+                {elem.title}
+              </p>
+            ))}
         </div>
         <div>
           <h2 className="font-semibold mb-8">Recent Episodes</h2>
