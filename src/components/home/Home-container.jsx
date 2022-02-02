@@ -1,7 +1,7 @@
 import React from 'react';
 import Episodes from './Episodes';
 import Featured from './Featured';
-import Gallery from './Gallery';
+import Images from './Gallery';
 import Posts from './Posts';
 import Subscribe from './Subscribe';
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Featured />
       <Episodes />
       <Posts />
-      <Gallery />
+      <Images />
       <Subscribe />
     </div>
   );
