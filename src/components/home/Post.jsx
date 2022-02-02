@@ -11,7 +11,7 @@ export default function Post({
   const day = dateArray[2].substring(0, 2);
 
   return (
-    <div className="mx-4 my-2 pt-8 bg-white rounded shadow-xl">
+    <div className="mx-4 my-2 pt-8 bg-white rounded shadow-lg">
       <div className=" border-l-4 bord border-myred">
         <div className="flex flex-row px-6">
           <p className="text-myred mr-2">{author}</p>
