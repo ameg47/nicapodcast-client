@@ -8,11 +8,11 @@ export default function Episodes() {
   const podcasts = useSelector((state) => state.podcasts);
 
   return (
-    <div className="mx-48 border -mt-16 bg-white rounded-lg shadow-xl">
-      <div className="px-12 py-12">
+    <div className="mx-6 md:mx-18 xl:mx-48 border -mt-16 bg-white rounded-lg shadow-xl">
+      <div className="px-6 lg:px-12 py-12">
         <div className="flex justify-between">
-          <h2 className="text-3xl">Latest Podcast Episodes</h2>
-          <button type="button" className="w-28 text-sm bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded-sm">
+          <h2 className="text-2xl lg:text-3xl">Latest Podcast Episodes</h2>
+          <button type="button" className="w-28 h-10 sm:h-auto text-sm bg-myred hover:bg-white text-white hover:text-myred border border-myred py-2 px-4 rounded-sm">
             View All
           </button>
         </div>

@@ -36,7 +36,7 @@ export default function Posts() {
   };
 
   return (
-    <div className="my-16 mx-48">
+    <div className="my-16 mx-6 md:mx-18 xl:mx-48">
       <h2 className="text-3xl text-center">Blog posts</h2>
       <Slider ref={setSliderRef} {...sliderSettings}>
         {posts && posts.map((post) => (

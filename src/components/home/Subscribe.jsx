@@ -48,11 +48,11 @@ export default function Subscribe() {
   };
 
   return (
-    <div className="my-16 mx-48">
+    <div className="my-20 mx-6 md:mx-18 xl:mx-48">
       <h2 className="text-3xl text-center">New Episode Every Week!</h2>
       <p className="text-center my-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. </p>
       <form className="flex justify-center" onSubmit={handleSubmit}>
-        <label htmlFor="email" className="w-1/3">
+        <label htmlFor="email" className="md:w-1/3">
           <input
             type="email"
             name="email"

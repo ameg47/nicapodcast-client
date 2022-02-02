@@ -6,8 +6,8 @@ export default function Images() {
   const gallery = images.filter((img) => img.caption.rendered);
 
   return (
-    <div className="my-16 mx-48">
-      <h2 className="text-3xl text-center mb-4">Our Gallery</h2>
+    <div className="my-16 mx-6 md:mx-18 xl:mx-48">
+      <h2 className="text-3xl text-center mb-6">Our Gallery</h2>
       <div className="grid grid-cols-4">
         {gallery
         && gallery.map((img) => (
