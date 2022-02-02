@@ -1,13 +1,17 @@
 # Nica-podcasts
 
 In order for the client to run properly the corresponding wp API is required (should be running locally). You can find more about it here (https://github.com/ameg47/nicapodcast-CMS).
-The site is a SPA that only renders a home page, therefore there are no links or routing implemented.
+The site is a SPA that only renders a home page, therefore there are no links or routing implemented. Use npm install when running the project for the first time.
 
 Technologies used: React, Redux, Tailwind CSS
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs the necessary dependencies to run the application
 
 ### `npm start`
 
