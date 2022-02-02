@@ -15,7 +15,7 @@ export default function Featured() {
         </div>
         <div>
           <h2 className="text-6xl ">{podcast ? podcast.title.rendered : null}</h2>
-          <p className="text-lg my-6">{podcast ? podcast.content.rendered : null}</p>
+          <p className="text-lg my-6">{podcast ? podcast.content.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '') : null}</p>
         </div>
         <div className="flex flex-start items-center my-4">
           <span className="mr-2">Listen On Also</span>

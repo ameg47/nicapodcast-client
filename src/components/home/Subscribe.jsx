@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 export default function Subscribe() {
   const [email, setEmail] = useState('');
@@ -10,8 +12,37 @@ export default function Subscribe() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log('email', email);
+    const formData = new FormData();
+    formData.append('your-email', email);
+    axios.post(
+      'http://www.nicapodcasts.local/wp-json/contact-form-7/v1/contact-forms/79/feedback',
+      formData,
+      {
+        headers: { 'content-type': 'multipart/form-data' },
+      },
+    )
+      .then((response) => {
+        if (response.data.status === 'mail_sent') {
+          Swal.fire({
+            icon: 'success',
+            title: 'Done!',
+            text: response.data.message,
+          });
+        } else if (response.data.status === 'validation_failed') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: response.data.message,
+          });
+        }
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: error.data.message,
+        });
+      });
     e.target.reset();
     setEmail('');
   };

@@ -28,7 +28,7 @@ export default function Post({
       </div>
       <div className="px-8 mb-4 flex flex-col content-around">
         <h2 className="text-xl mt-4 mb-8">{title}</h2>
-        <p className="h-24 overflow-ellipsis overflow-hidden">{content}</p>
+        <p className="h-24 overflow-ellipsis overflow-hidden">{content.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '')}</p>
         <button type="button" className="w-32 my-4 text-sm bg-white hover:bg-myred text-myred hover:text-white border border-myred py-2 px-4 rounded">
           Read more
         </button>
