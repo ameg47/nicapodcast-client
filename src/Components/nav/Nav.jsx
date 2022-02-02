@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { DOMAIN } from '../../Controllers/constants';
 
 export default function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Nav() {
         <div className="container px-4 flex flex-wrap lg:flex-nowrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <img
-              src="http://nicapodcasts.local/wp-content/uploads/2022/02/logo-300x134.png"
+              src={`${DOMAIN}/wp-content/uploads/2022/02/logo-300x134.png`}
               alt="logo"
               className="w-36 sm:w-48"
             />

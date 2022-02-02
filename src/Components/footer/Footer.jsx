@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { DOMAIN } from '../../Controllers/constants';
 
 export default function Footer() {
   const menuElem = useSelector((state) => state.menu);
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className="md:grid grid-cols-5">
         <div className="col-span-2 md:pr-12">
           <img
-            src="http://nicapodcasts.local/wp-content/uploads/2022/02/logo-300x134.png"
+            src={`${DOMAIN}/wp-content/uploads/2022/02/logo-300x134.png`}
             alt="logo"
             className="w-36 mb-4"
           />
@@ -36,17 +37,17 @@ export default function Footer() {
           <div className="space-y-4 mb-2">
             <img
               className="h-10"
-              src="http://nicapodcasts.local/wp-content/uploads/2022/02/listen-on-spotify-300x76.png"
+              src={`${DOMAIN}/wp-content/uploads/2022/02/listen-on-spotify-300x76.png`}
               alt="spotify"
             />
             <img
               className="h-10"
-              src="http://nicapodcasts.local/wp-content/uploads/2022/02/listen-on-google-podcasts-300x76.png"
+              src={`${DOMAIN}/wp-content/uploads/2022/02/listen-on-google-podcasts-300x76.png`}
               alt="google-pod"
             />
             <img
               className="h-10"
-              src="http://nicapodcasts.local/wp-content/uploads/2022/02/listen-on-apple-300x93.png"
+              src={`${DOMAIN}/wp-content/uploads/2022/02/listen-on-apple-300x93.png`}
               alt="apple-pod"
             />
           </div>

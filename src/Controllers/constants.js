@@ -1,4 +1,5 @@
 export const BASIC_URL = 'http://nicapodcasts.local/wp-json/wp/v2';
+export const DOMAIN = 'http://nicapodcasts.local';
 export const GET_MENU = 'GET_MENU';
 export const GET_POSTS = 'GET_POSTS';
 export const GET_PAGE = 'GET_PAGE';
