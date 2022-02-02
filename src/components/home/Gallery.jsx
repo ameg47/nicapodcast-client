@@ -11,7 +11,7 @@ export default function Images() {
       <div className="grid grid-cols-4">
         {gallery
         && gallery.map((img) => (
-          <a href={img.media_details.sizes.full.source_url} target="_blank" rel="noreferrer">
+          <a key={img.id} href={img.media_details.sizes.full.source_url} target="_blank" rel="noreferrer">
             <img
               className="object-cover h-48 w-96 opacity-75 hover:opacity-100"
               src={img.media_details.sizes.full.source_url}

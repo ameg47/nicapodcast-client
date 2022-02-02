@@ -46,6 +46,7 @@ export default function Posts() {
             author={post._embedded.author[0].name}
             category={post._embedded['wp:term'][0][0].name}
             date={post.date}
+            key={post.id}
           />
         ))}
       </Slider>

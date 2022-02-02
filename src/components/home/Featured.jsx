@@ -25,7 +25,7 @@ export default function Featured() {
           <img
             className="h-10 mb-2"
             src="http://nicapodcasts.local/wp-content/uploads/2022/02/listen-on-spotify-300x76.png"
-            alt="spotify"
+            alt="spotify-pod"
           />
           <img
             className="h-10 mb-2"

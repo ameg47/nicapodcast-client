@@ -19,7 +19,7 @@ export default function Footer() {
           <h2 className="font-semibold mb-6">Pages</h2>
           {menuElem
             && menuElem.map((elem) => (
-              <p className="text-stone-400 mb-4 hover:cursor-pointer">
+              <p key={elem.id} className="text-stone-400 mb-4 hover:cursor-pointer">
                 {elem.title}
               </p>
             ))}

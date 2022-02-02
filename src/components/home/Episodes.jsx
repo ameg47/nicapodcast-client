@@ -18,7 +18,7 @@ export default function Episodes() {
         </div>
         <ul className="my-16">
           {podcasts && podcasts.slice(0, numEp).map((podcast) => (
-            <li>
+            <li key={podcast.id}>
               <Episode
                 title={podcast.title.rendered}
                 content={podcast.content.rendered.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '')}

@@ -33,7 +33,7 @@ export default function Nav() {
               </li>
               {menuElem
             && menuElem.map((elem) => (
-              <li className="lg:mr-8 text-center transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">
+              <li key={elem.id} className="lg:mr-8 text-center transition duration-150 border-b-4 border-transparent hover:border-myred hover:cursor-pointer">
                 {elem.title}
               </li>
             ))}
